@@ -436,46 +436,12 @@ class PlateExchanger:
             self.C_p[self.hi, :] = self.C_ph_f(self.UnNormalizedT[self.hi, :])
             self.k[self.hi, :] = self.k_h_f(self.UnNormalizedT[self.hi, :])
 
-            # try:
-            #     self.rho[self.hi, :] = \self.rho_h_f(self.UnNormalizedT[self.hi, :])
-            # except:
-            #     pass
-            # try:
-            #     self.mu[self.hi, :] = self.mu_h_f(self.UnNormalizedT[self.hi, :])
-            # except:
-            #     pass
-            # try:
-            #     self.C_p[self.hi, :] = self.C_ph_f(self.UnNormalizedT[self.hi, :])
-            # except:
-            #     pass
-            # try:
-            #     self.k[self.hi, :] = self.k_h_f(self.UnNormalizedT[self.hi, :])
-            # except:
-            #     pass
-
         if self.__ColdFluidUpdate:
             # XXX: verify exception
             self.rho[self.ci, :] = self.rho_c_f(self.UnNormalizedT[self.ci, :])
             self.mu[self.ci, :] = self.mu_c_f(self.UnNormalizedT[self.ci, :])
             self.C_p[self.ci, :] = self.C_pc_f(self.UnNormalizedT[self.ci, :])
             self.k[self.ci, :] = self.k_c_f(self.UnNormalizedT[self.ci, :])
-
-            # try:
-            #     self.rho[self.ci, :] = self.rho_c_f(self.UnNormalizedT[self.ci, :])
-            # except:
-            #     pass
-            # try:
-            #     self.mu[self.ci, :] = self.mu_c_f(self.UnNormalizedT[self.ci, :])
-            # except:
-            #     pass
-            # try:
-            #     self.C_p[self.ci, :] = self.C_pc_f(self.UnNormalizedT[self.ci, :])
-            # except:
-            #     pass
-            # try:
-            #     self.k[self.ci, :] = self.k_c_f(self.UnNormalizedT[self.ci, :])
-            # except:
-            #     pass
 
         return
 
